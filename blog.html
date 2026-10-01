@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مدونة ديار الخبرة | مقالات المصاعد والسلالم والمشايات الكهربائية</title>
+<meta name="description" content="مقالات ونصائح من ديار الخبرة حول تركيب وصيانة المصاعد والسلالم الكهربائية والمشايات المتحركة في مكة المكرمة والسعودية.">
+<meta name="keywords" content="مصاعد مكة, تركيب مصاعد, صيانة مصاعد, سلالم كهربائية, مشايات متحركة, عقود صيانة مصاعد, مصاعد فلل, مصاعد بانورامية, ديار الخبرة">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0c192c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #0c192c;
+  --navy-2: #12243e;
+  --grey: #767f83;
+  --gold: #c6a878;
+  --gold-2: #dec598;
+  --brown: #6a1d08;
+  --paper: #f6f3ec;
+  --ink: #1a2638;
+  --header-h: 68px;
+  --ease: cubic-bezier(.22, .9, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; scroll-padding-top: 90px; }
+
+body {
+  font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.9;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* progress */
+.progress {
+  position: fixed;
+  top: 0; right: 0;
+  height: 4px;
+  width: 0;
+  z-index: 2000;
+  background: linear-gradient(90deg, var(--brown), var(--gold), var(--gold-2));
+  box-shadow: 0 0 12px rgba(198, 168, 120, .8);
+}
+
+/* header */
+.bp-header {
+  position: fixed;
+  top: 0; right: 0; left: 0;
+  z-index: 1500;
+  height: var(--header-h);
+  background: rgba(12, 25, 44, .88);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(198, 168, 120, .3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .3);
+}
+
+.bp-header-inner {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: .88rem;
+  font-weight: 800;
+  color: var(--gold-2);
+  border: 1.5px solid rgba(198, 168, 120, .65);
+  border-radius: 999px;
+  background: rgba(198, 168, 120, .08);
+  white-space: nowrap;
+  transition: background .35s, color .35s, transform .35s var(--ease);
+}
+
+.back-btn svg { transition: transform .35s var(--ease); }
+
+.back-btn:hover {
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  transform: translateY(-2px);
+}
+
+.back-btn:hover svg { transform: translateX(5px); }
+
+.bp-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bp-brand img {
+  height: 40px;
+  width: auto;
+  max-width: 90px;
+  object-fit: contain;
+}
+
+.bp-brand span {
+  font-size: 1.3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--gold-2), var(--gold), #fff, var(--gold));
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes shine { to { background-position: -250% 0; } }
+
+/* hero */
+.bp-hero {
+  position: relative;
+  padding: calc(var(--header-h) + 70px) 22px 90px;
+  background: linear-gradient(160deg, var(--navy), var(--navy-2) 60%, var(--navy));
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .28;
+}
+
+.bp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(106, 29, 8, .6), transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(198, 168, 120, .22), transparent 50%),
+    linear-gradient(180deg, rgba(12, 25, 44, .55), rgba(12, 25, 44, .95));
+}
+
+.bp-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .45;
+  background-image:
+    linear-gradient(rgba(198, 168, 120, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(198, 168, 120, .07) 1px, transparent 1px);
+  background-size: 52px 52px;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 85%);
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 85%);
+}
+
+.hero-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: .85rem;
+  color: rgba(255, 255, 255, .65);
+}
+
+.crumbs a:hover { color: var(--gold-2); }
+
+.cat-chip {
+  display: inline-block;
+  padding: 6px 18px;
+  margin-bottom: 18px;
+  font-size: .85rem;
+  font-weight: 800;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(198, 168, 120, .4);
+}
+
+.hero-title {
+  font-size: clamp(1.7rem, 4.4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.hero-lead {
+  max-width: 740px;
+  margin: 0 auto 26px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, .82);
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  font-size: .85rem;
+  color: rgba(255, 255, 255, .85);
+  border: 1px solid rgba(118, 127, 131, .6);
+  border-radius: 999px;
+  background: rgba(118, 127, 131, .12);
+}
+
+.hero-meta svg { color: var(--gold); }
+
+/* layout */
+.bp-wrap {
+  max-width: 1240px;
+  margin: -40px auto 0;
+  padding: 0 22px 70px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 34px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+.article {
+  background: #fff;
+  border-radius: 28px;
+  padding: 48px 52px 40px;
+  border: 1px solid rgba(198, 168, 120, .35);
+  box-shadow: 0 30px 70px rgba(12, 25, 44, .14);
+}
+
+/* takeaways */
+.takeaways {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 26px 28px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--navy), var(--navy-2));
+  border-radius: 22px;
+  border-right: 6px solid var(--gold);
+  overflow: hidden;
+}
+
+.takeaways::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -6%;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(198, 168, 120, .3), transparent 70%);
+}
+
+.takeaways h2 {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--gold-2);
+  margin-bottom: 12px;
+}
+
+.takeaways ul { position: relative; display: grid; gap: 8px; }
+
+.takeaways li {
+  position: relative;
+  padding-right: 28px;
+  font-size: .98rem;
+  color: rgba(255, 255, 255, .88);
+}
+
+.takeaways li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 4px;
+  width: 9px;
+  height: 9px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+
+/* content */
+.sec { margin-bottom: 44px; }
+
+.sec h2 {
+  position: relative;
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+  font-weight: 900;
+  line-height: 1.6;
+  color: var(--navy);
+  margin-bottom: 18px;
+  padding-right: 22px;
+}
+
+.sec h2::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 7px;
+  height: calc(100% - 16px);
+  min-height: 26px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, var(--gold), var(--brown));
+}
+
+.sec h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--brown);
+  margin: 22px 0 10px;
+}
+
+.sec p {
+  font-size: 1.05rem;
+  color: rgba(26, 38, 56, .88);
+  margin-bottom: 16px;
+}
+
+.sec b { color: var(--navy); font-weight: 800; }
+
+.sec ul.bul { display: grid; gap: 12px; margin: 6px 0 20px; }
+
+.sec ul.bul li {
+  position: relative;
+  padding: 14px 52px 14px 16px;
+  font-size: 1.02rem;
+  background: #faf7f1;
+  border: 1px solid rgba(198, 168, 120, .35);
+  border-radius: 16px;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s;
+}
+
+.sec ul.bul li::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 11px;
+  height: 11px;
+  background: linear-gradient(135deg, var(--gold), var(--brown));
+  transform: rotate(45deg);
+}
+
+.sec ul.bul li:hover {
+  transform: translateX(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px rgba(198, 168, 120, .3);
+}
+
+.sec ol.steps { counter-reset: st; display: grid; gap: 12px; margin: 6px 0 20px; }
+
+.sec ol.steps li {
+  counter-increment: st;
+  position: relative;
+  min-height: 56px;
+  padding: 14px 70px 14px 16px;
+  font-size: 1.02rem;
+  background: #fff;
+  border: 1px solid rgba(118, 127, 131, .3);
+  border-radius: 16px;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+
+.sec ol.steps li::before {
+  content: counter(st);
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(198, 168, 120, .45);
+}
+
+.sec ol.steps li:hover {
+  transform: translateX(-6px);
+  box-shadow: 0 12px 28px rgba(12, 25, 44, .12);
+}
+
+.note {
+  position: relative;
+  margin: 8px 0 22px;
+  padding: 20px 24px 20px 20px;
+  padding-right: 64px;
+  font-size: 1.02rem;
+  color: var(--navy);
+  background: linear-gradient(135deg, rgba(198, 168, 120, .22), rgba(198, 168, 120, .08));
+  border: 1px solid rgba(198, 168, 120, .6);
+  border-radius: 18px;
+}
+
+.note::before {
+  content: "!";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: #fff;
+  background: var(--brown);
+  border-radius: 50%;
+}
+
+.tbl-wrap {
+  overflow-x: auto;
+  margin: 8px 0 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(12, 25, 44, .15);
+  box-shadow: 0 14px 34px rgba(12, 25, 44, .08);
+}
+
+table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: .96rem; }
+
+thead th {
+  padding: 14px 16px;
+  text-align: right;
+  font-weight: 800;
+  color: var(--gold-2);
+  background: linear-gradient(135deg, var(--navy), var(--navy-2));
+}
+
+tbody td {
+  padding: 13px 16px;
+  border-top: 1px solid rgba(12, 25, 44, .08);
+  color: rgba(26, 38, 56, .9);
+}
+
+tbody tr:nth-child(even) { background: #faf7f1; }
+tbody tr:hover { background: rgba(198, 168, 120, .18); }
+tbody td:first-child { font-weight: 800; color: var(--navy); }
+
+figure.pic { margin: 10px 0 26px; }
+
+.pic-box {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  box-shadow: 0 22px 46px rgba(12, 25, 44, .22);
+}
+
+.pic-box img { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; object-fit: cover; }
+
+.pic-fb {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: .9rem;
+  color: rgba(198, 168, 120, .8);
+  background:
+    repeating-linear-gradient(45deg, rgba(198, 168, 120, .06) 0 12px, transparent 12px 24px),
+    linear-gradient(135deg, var(--navy-2), var(--navy));
+}
+
+figure.pic figcaption { margin-top: 10px; text-align: center; font-size: .88rem; color: var(--grey); }
+
+/* faq */
+.faq { margin-top: 10px; }
+
+.faq h2 { margin-bottom: 20px; }
+
+.faq details {
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid rgba(118, 127, 131, .35);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color .3s, box-shadow .3s;
+}
+
+.faq details[open] {
+  border-color: var(--gold);
+  box-shadow: 0 14px 32px rgba(198, 168, 120, .3);
+}
+
+.faq summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 56px 16px 18px;
+  font-size: 1.04rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  border-radius: 8px;
+  transition: transform .35s var(--ease);
+}
+
+.faq details[open] summary::before { content: "−"; transform: translateY(-50%) rotate(180deg); }
+
+.faq details p { padding: 0 18px 18px; margin: 0; font-size: 1rem; color: rgba(26, 38, 56, .85); }
+
+/* aside */
+.aside { position: sticky; top: calc(var(--header-h) + 22px); display: grid; gap: 20px; }
+
+.toc, .aside-cta {
+  border-radius: 22px;
+  padding: 22px;
+  border: 1px solid rgba(198, 168, 120, .4);
+  box-shadow: 0 20px 46px rgba(12, 25, 44, .12);
+}
+
+.toc { background: #fff; max-height: calc(100vh - 260px); overflow-y: auto; }
+
+.toc h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--navy);
+}
+
+.toc h3::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.toc ol { display: grid; gap: 4px; }
+
+.toc a {
+  display: block;
+  padding: 8px 12px;
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: rgba(26, 38, 56, .75);
+  border-right: 3px solid transparent;
+  border-radius: 8px;
+  transition: background .3s, color .3s, border-color .3s;
+}
+
+.toc a:hover { background: rgba(198, 168, 120, .15); color: var(--navy); }
+
+.toc a.on {
+  color: var(--navy);
+  background: rgba(198, 168, 120, .25);
+  border-right-color: var(--brown);
+}
+
+.aside-cta {
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brown), #8a2a10);
+}
+
+.aside-cta h3 { font-size: 1.1rem; font-weight: 900; margin-bottom: 6px; }
+.aside-cta p { font-size: .9rem; margin-bottom: 14px; color: rgba(255, 255, 255, .85); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-size: .98rem;
+  font-weight: 800;
+  border-radius: 14px;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+
+.btn + .btn { margin-top: 10px; }
+.btn:hover { transform: translateY(-3px); }
+
+.btn-gold {
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-2), var(--gold) 60%, #b48f55);
+  box-shadow: 0 10px 26px rgba(198, 168, 120, .45);
+}
+
+.btn-line { color: #fff; border: 1.5px solid rgba(255, 255, 255, .6); }
+.btn-line:hover { background: rgba(255, 255, 255, .12); }
+
+/* bottom cta */
+.bottom-cta {
+  position: relative;
+  margin-top: 10px;
+  padding: 34px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 22px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--navy), var(--navy-2));
+  border: 1px solid rgba(198, 168, 120, .6);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.bottom-cta::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -6%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(198, 168, 120, .3), transparent 70%);
+}
+
+.bottom-cta > div { position: relative; }
+.bottom-cta h3 { font-size: 1.4rem; font-weight: 900; margin-bottom: 4px; color: var(--gold-2); }
+.bottom-cta p { color: rgba(255, 255, 255, .8); max-width: 520px; margin: 0; font-size: 1rem; }
+.bottom-cta .acts { display: flex; flex-wrap: wrap; gap: 10px; }
+.bottom-cta .btn { width: auto; min-width: 150px; margin: 0; }
+
+/* related */
+.related { max-width: 1240px; margin: 0 auto; padding: 0 22px 90px; }
+
+.related h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.related h2 em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--brown), var(--gold), var(--brown));
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+.rel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+.rel-card {
+  display: block;
+  padding: 26px;
+  background: #fff;
+  border: 1px solid rgba(198, 168, 120, .4);
+  border-radius: 22px;
+  box-shadow: 0 16px 40px rgba(12, 25, 44, .08);
+  transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .4s;
+}
+
+.rel-card:hover { transform: translateY(-8px); border-color: var(--gold); box-shadow: 0 26px 56px rgba(198, 168, 120, .35); }
+
+.rel-card small {
+  display: inline-block;
+  padding: 4px 14px;
+  margin-bottom: 12px;
+  font-size: .78rem;
+  font-weight: 800;
+  color: var(--brown);
+  background: rgba(198, 168, 120, .22);
+  border-radius: 999px;
+}
+
+.rel-card h3 { font-size: 1.15rem; font-weight: 900; line-height: 1.7; color: var(--navy); margin-bottom: 10px; }
+.rel-card p { font-size: .95rem; color: rgba(26, 38, 56, .72); margin-bottom: 14px; }
+.rel-card span { font-weight: 800; color: var(--brown); }
+
+/* footer */
+.bp-footer {
+  padding: 26px 22px;
+  text-align: center;
+  font-size: .9rem;
+  color: rgba(255, 255, 255, .7);
+  background: var(--navy);
+  border-top: 3px solid var(--gold);
+}
+
+.bp-footer a { color: var(--gold-2); font-weight: 800; }
+
+/* reveal */
+.rv { opacity: 0; transform: translateY(34px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.rv.in { opacity: 1; transform: none; }
+
+/* responsive */
+@media (max-width: 1024px) {
+  .bp-wrap { grid-template-columns: 1fr; margin-top: -30px; }
+  .aside { position: static; order: -1; }
+  .toc { max-height: none; }
+  .aside-cta { display: none; }
+}
+
+@media (max-width: 640px) {
+  :root { --header-h: 62px; }
+  .bp-header-inner { padding: 0 14px; }
+  .back-btn { padding: 7px 12px; font-size: .8rem; }
+  .bp-brand img { height: 34px; }
+  .bp-brand span { font-size: 1.1rem; }
+  .bp-hero { padding: calc(var(--header-h) + 46px) 18px 76px; }
+  .bp-wrap { padding: 0 14px 54px; gap: 22px; }
+  .article { padding: 28px 18px 26px; border-radius: 22px; }
+  .sec ul.bul li { padding: 13px 46px 13px 14px; }
+  .sec ul.bul li::before { right: 18px; }
+  .sec ol.steps li { padding: 13px 64px 13px 14px; }
+  .rel-grid { grid-template-columns: 1fr; }
+  .related { padding: 0 14px 64px; }
+  .bottom-cta { padding: 26px 20px; text-align: center; justify-content: center; }
+  .bottom-cta .acts { width: 100%; justify-content: center; }
+  .bottom-cta .btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="progress" id="progress"></div>
+
+<header class="bp-header">
+  <div class="bp-header-inner">
+    <a href="index.html" class="back-btn" aria-label="العودة للرئيسية">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <span>العودة للرئيسية</span>
+    </a>
+    <a href="index.html" class="bp-brand" aria-label="ديار الخبرة">
+      <img src="images/image-removebg-preview.png" alt="شعار ديار الخبرة" onerror="this.style.display='none'">
+      <span>ديار الخبرة</span>
+    </a>
+  </div>
+</header>
+
+<main id="app">
+  <section class="bp-hero" id="hero">
+    <img class="hero-img" id="heroImg" src="" alt="" onerror="this.style.display='none'">
+    <div class="hero-inner">
+      <nav class="crumbs" aria-label="مسار التنقل">
+        <a href="index.html">الرئيسية</a><span>/</span>
+        <a href="index.html#blog">المدونة</a><span>/</span>
+        <span id="crumbCat"></span>
+      </nav>
+      <span class="cat-chip" id="catChip"></span>
+      <h1 class="hero-title" id="postTitle"></h1>
+      <p class="hero-lead" id="postLead"></p>
+      <div class="hero-meta" id="postMeta"></div>
+    </div>
+  </section>
+
+  <div class="bp-wrap">
+    <article class="article" id="article"></article>
+
+    <aside class="aside">
+      <nav class="toc" aria-label="فهرس المقال">
+        <h3>محتويات المقال</h3>
+        <ol id="tocList"></ol>
+      </nav>
+      <div class="aside-cta">
+        <h3>تحتاج استشارة مجانية؟</h3>
+        <p>مهندسونا في مكة المكرمة جاهزون للإجابة عن أسئلتك.</p>
+        <a href="tel:0599985514" class="btn btn-gold">اتصل 0599985514</a>
+        <a href="https://wa.me/966599985514" class="btn btn-line" target="_blank" rel="noopener">واتساب</a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="related">
+    <h2>اقرأ أيضاً <em>مقالات أخرى</em></h2>
+    <div class="rel-grid" id="relGrid"></div>
+  </section>
+</main>
+
+<footer class="bp-footer">
+  جميع الحقوق محفوظة © <a href="index.html">ديار الخبرة</a> | مصاعد وسلالم ومشايات كهربائية في مكة المكرمة
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var PHONE = '0599985514';
+
+  var ICON_CAL = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
+  var ICON_CLK = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+  var ICON_USER = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>';
+  var POSTS = {
+
+    elevators: {
+      cat: 'المصاعد',
+      title: 'كيف تختار المصعد المناسب لمبناك في مكة المكرمة؟ الدليل الكامل',
+      lead: 'دليل شامل يشرح أنواع المصاعد، وأنظمة التشغيل، وكيفية تحديد السعة والسرعة، ومعايير الأمان، وأشهر الأخطاء التي يقع فيها الملاك قبل توريد وتركيب مصعد في الفيلا أو العمارة أو الفندق.',
+      date: 'أكتوبر 2026',
+      read: '12 دقيقة',
+      img: 'images/serv2.png',
+      desc: 'دليل كامل لاختيار المصعد المناسب في مكة المكرمة: أنواع مصاعد الركاب والبانوراما والفلل والبضائع، السعة والسرعة، الأمان، التصميم، وتوفير الطاقة.',
+      takeaways: [
+        'حدد عدد الأدوار وعدد المستخدمين وطبيعة الاستخدام قبل التفكير في الشكل والتشطيب.',
+        'السعة والسرعة الصحيحتان تعنيان انتظاراً أقل وعمراً أطول للمصعد.',
+        'الأمان أولاً: فرامل أمان، حساسات أبواب، ونظام إنقاذ عند انقطاع الكهرباء لا غنى عنها.',
+        'اختيار شركة تتوفر لديها قطع الغيار وخدمة الطوارئ لا يقل أهمية عن اختيار المصعد نفسه.'
+      ],
+      sections: [
+        { id: 'intro', title: 'مقدمة: المصعد قرار يؤثر على قيمة العقار', blocks: [
+          { t: 'p', x: 'عندما تبدأ في التفكير في تركيب مصعد داخل فيلا أو عمارة أو فندق في مكة المكرمة، فأنت لا تشتري مجرد جهاز لنقل الأشخاص بين الأدوار، بل تتخذ قراراً يؤثر على راحة السكان لسنوات طويلة، وعلى قيمة العقار عند البيع أو التأجير، وعلى مستوى الأمان داخل المبنى. المصعد الجيد يعمل بهدوء وسلاسة ولا يلفت الانتباه، أما المصعد الذي لم يُختَر بعناية فيتحول مع الوقت إلى مصدر إزعاج دائم: أعطال متكررة، وضوضاء، وانتظار طويل، واستهلاك عالٍ للكهرباء.' },
+          { t: 'p', x: 'في هذا الدليل نشرح لك بالتفصيل كل ما تحتاج معرفته قبل أن تطلب عرض سعر: أنواع المصاعد، وكيف تحدد السعة والسرعة المناسبتين، ومعايير الأمان التي لا يجب التنازل عنها، وأهم الأخطاء التي يقع فيها الملاك، وصولاً إلى مراحل التنفيذ من المعاينة حتى التسليم والضمان.' },
+          { t: 'note', x: '<b>نصيحة سريعة:</b> ابدأ بتحديد عدد الأدوار وعدد المستخدمين وطبيعة الاستخدام قبل أن تفكر في الشكل والتشطيب. الاحتياج أولاً ثم التصميم.' }
+        ]},
+        { id: 'types', title: 'أنواع المصاعد المتوفرة', blocks: [
+          { t: 'p', x: 'تختلف المصاعد باختلاف الغرض من استخدامها ونوع المبنى. وفيما يلي أهم الأنواع التي نقوم بتوريدها وتركيبها في مكة المكرمة وبقية مدن المملكة:' },
+          { t: 'ul', x: [
+            '<b>مصاعد الركاب:</b> الخيار الأكثر شيوعاً للعمارات السكنية والأبراج والمباني الإدارية، وتتوفر بسعات وسرعات متعددة وأنظمة تحكم ذكية تقلل زمن الانتظار.',
+            '<b>المصاعد البانورامية:</b> كابينة زجاجية تمنح إطلالة مفتوحة وتضيف طابعاً فاخراً للفنادق والمولات والواجهات الراقية والفلل الحديثة.',
+            '<b>مصاعد الفلل والمنازل:</b> مصاعد صغيرة الحجم وأنيقة تناسب الفلل والقصور والدوبلكس، وتحتاج إلى تعديل بسيط في المبنى، وتناسب كبار السن وذوي الاحتياجات الخاصة.',
+            '<b>مصاعد البضائع:</b> مصممة لنقل الأحمال الثقيلة في المستودعات والمصانع والمطاعم والمراكز التجارية، ببنية معدنية قوية وأرضية مقواة.',
+            '<b>مصاعد المستشفيات والأسرّة الطبية:</b> كابينة أعمق وأبواب أوسع لنقل الأسرّة والنقالات، مع توقف دقيق عند مستوى الطابق وتشغيل هادئ يريح المرضى.',
+            '<b>مصاعد الفنادق ومنشآت الحجاج والمعتمرين:</b> تتحمل الاستخدام المكثف على مدار الساعة وفي مواسم الذروة، وتحتاج إلى سعات كبيرة ونظام استدعاء ذكي لتقليل الازدحام.'
+          ]},
+          { t: 'img', src: 'images/serv2.png', alt: 'أنواع المصاعد: ركاب وبانورامي وفلل وبضائع', cap: 'ضع هنا صورة توضح أنواع المصاعد' }
+        ]},
+        { id: 'systems', title: 'أنظمة التشغيل: كهربائي أم هيدروليك أم بدون غرفة ماكينات؟', blocks: [
+          { t: 'p', x: 'بعد تحديد نوع المصعد تأتي مرحلة اختيار نظام التشغيل، وهو قرار فني يؤثر على التكلفة والمساحة والضوضاء واستهلاك الطاقة. هذه مقارنة مبسطة تساعدك على الفهم:' },
+          { t: 'table', head: ['وجه المقارنة', 'كهربائي (جر)', 'هيدروليك', 'بدون غرفة ماكينات'], rows: [
+            ['الأنسب لـ', 'العمارات والأبراج متعددة الأدوار', 'المباني قليلة الأدوار والمخازن والفلل', 'المباني التي تريد توفير المساحة وتصميماً عصرياً'],
+            ['الارتفاع المناسب', 'متوسط إلى عالٍ جداً', 'منخفض إلى متوسط', 'منخفض إلى متوسط'],
+            ['استهلاك الطاقة', 'منخفض مع المحركات الحديثة', 'أعلى نسبياً', 'منخفض'],
+            ['غرفة الماكينات', 'مطلوبة في الغالب', 'غرفة صغيرة أو وحدة هيدروليكية', 'غير مطلوبة'],
+            ['راحة الركوب', 'سلسة وهادئة', 'جيدة', 'سلسة وهادئة']
+          ]},
+          { t: 'p', x: 'لا يوجد نظام هو الأفضل في كل الحالات، بل الأنسب لمبناك. لذلك يقوم مهندسونا بمعاينة الموقع أولاً ثم يرشحون النظام الأمثل بناءً على الارتفاع والمساحة المتاحة والميزانية وطبيعة الاستخدام.' }
+        ]},
+        { id: 'capacity', title: 'كيف تحدد السعة والسرعة المناسبتين؟', blocks: [
+          { t: 'p', x: 'اختيار سعة أقل من احتياجك يعني ازدحاماً وانتظاراً طويلاً وضغطاً زائداً على المعدات، أما المبالغة في السعة فتعني تكلفة أعلى بلا فائدة. الجدول التالي يعطيك تصوراً أولياً للسعات الشائعة:' },
+          { t: 'table', head: ['عدد الأشخاص', 'الحمولة التقريبية', 'الاستخدام النموذجي'], rows: [
+            ['4 أشخاص', '320 كجم', 'الفلل والمنازل'],
+            ['6 أشخاص', '450 كجم', 'العمارات الصغيرة'],
+            ['8 أشخاص', '630 كجم', 'العمارات السكنية والمكاتب'],
+            ['13 شخصاً', '1000 كجم', 'الأبراج والفنادق'],
+            ['21 شخصاً', '1600 كجم', 'المستشفيات والمولات والمنشآت الكبرى']
+          ]},
+          { t: 'note', x: 'الأرقام السابقة استرشادية فقط، ويتحدد التصميم النهائي بعد المعاينة ودراسة حركة المستخدمين وأبعاد البئر المتاحة.' },
+          { t: 'h3', x: 'خطوات تحديد السعة' },
+          { t: 'ol', x: [
+            'احسب عدد الأشخاص الذين يستخدمون المبنى في وقت الذروة (الصباح والمساء غالباً).',
+            'حدد عدد الأدوار والمسافة الكلية التي سيقطعها المصعد.',
+            'فكر في الحاجة لنقل أثاث أو أسرّة أو عربات، فهذا يغير عمق وعرض الكابينة.',
+            'ضع في الحسبان التوسع المستقبلي وزيادة عدد السكان أو الزوار.'
+          ]},
+          { t: 'h3', x: 'ماذا عن السرعة؟' },
+          { t: 'p', x: 'في المباني القصيرة (حتى ستة أدوار تقريباً) تكفي سرعة قريبة من متر واحد في الثانية، أما الأبراج والمباني العالية فتحتاج إلى سرعات أعلى لتقليل زمن الرحلة. لكن السرعة العالية وحدها لا تكفي؛ فجودة التسارع والتباطؤ وسلاسة التوقف هي ما يصنع الراحة الحقيقية للراكب.' }
+        ]},
+        { id: 'count', title: 'كم مصعداً يحتاج مبناك؟', blocks: [
+          { t: 'p', x: 'عدد المصاعد يتحدد بحسب عدد الأدوار وعدد المستخدمين وطبيعة المبنى، وهذه إرشادات عامة:' },
+          { t: 'ul', x: [
+            '<b>الفلل والمنازل:</b> مصعد واحد غالباً يكفي، مع مراعاة موقعه ليكون قريباً من الدرج الرئيسي.',
+            '<b>العمارات السكنية الصغيرة:</b> مصعد واحد للمباني القصيرة، ويفضل مصعدان في المباني التي تضم عدداً كبيراً من الشقق حتى لا يتعطل المبنى بالكامل أثناء الصيانة.',
+            '<b>الفنادق ومنشآت الحجاج:</b> يفضل عدة مصاعد للنزلاء ومصعد خدمة منفصل للعاملين والأمتعة.',
+            '<b>المستشفيات:</b> مصاعد للزوار ومصاعد أسرّة ومصعد خدمة، مع التخطيط لحالات الطوارئ.',
+            '<b>المولات والمجمعات التجارية:</b> مصاعد بانورامية للزوار مع سلالم كهربائية وأخرى للبضائع والخدمات.'
+          ]}
+        ]},
+        { id: 'safety', title: 'معايير الأمان التي لا يجب التنازل عنها', blocks: [
+          { t: 'p', x: 'الأمان هو أهم ما في المصعد، وهو آخر ما يجب أن توفر فيه. تأكد من وجود العناصر التالية في أي مصعد تقوم بتركيبه:' },
+          { t: 'ul', x: [
+            '<b>فرامل الأمان ومحدد السرعة:</b> توقف الكابينة فوراً في حال تجاوز السرعة الآمنة.',
+            '<b>حساسات الأبواب (الستارة الضوئية):</b> تمنع انغلاق الباب على الركاب أو الأطفال.',
+            '<b>نظام الإنقاذ الآلي عند انقطاع الكهرباء:</b> ينزل بالمصعد إلى أقرب طابق ويفتح الباب بأمان.',
+            '<b>الإنذار والاتصال الداخلي:</b> زر إنذار ووسيلة اتصال لتواصل الراكب مع جهة الدعم عند الحاجة.',
+            '<b>إنارة الطوارئ:</b> تبقي الكابينة مضاءة عند انقطاع التيار.',
+            '<b>مفاتيح نهاية الشوط:</b> تمنع تجاوز الكابينة لأعلى أو أدنى نقطة في البئر.',
+            '<b>حماية الحمل الزائد:</b> تمنع تحرك المصعد إذا تجاوز الوزن المسموح.'
+          ]},
+          { t: 'note', x: 'نحرص في ديار الخبرة على أن تكون جميع مصاعدنا مطابقة لمتطلبات السلامة والكود السعودي للمباني، مع اختبارات تشغيل كاملة قبل التسليم.' }
+        ]},
+        { id: 'design', title: 'التصميم والتشطيبات: اجعل المصعد جزءاً من ديكور مبناك', blocks: [
+          { t: 'p', x: 'المصعد هو أول ما يراه الزائر وآخر ما يلمسه عند المغادرة، لذلك يستحق أن يكون جزءاً متناغماً مع هوية المبنى. لدينا خيارات واسعة للتشطيب تناسب جميع الأذواق والميزانيات:' },
+          { t: 'ul', x: [
+            '<b>الكابينة:</b> ستانلس ستيل بتشطيبات مصقولة أو مطفية، أو زجاج، أو ألواح خشبية أو رخامية حسب الطلب.',
+            '<b>الإضاءة:</b> إضاءة LED موفرة للطاقة بدرجات لون متعددة تمنح المكان دفئاً أو فخامة.',
+            '<b>الأرضيات:</b> رخام أو جرانيت أو بورسلين بما ينسجم مع أرضيات الصالات.',
+            '<b>لوحات التحكم والأزرار:</b> أزرار واضحة بخطوط كبيرة وبرايل لخدمة ذوي الاحتياجات الخاصة.',
+            '<b>الأبواب:</b> أبواب أوتوماتيكية بالستانلس أو بألوان مخصصة تتوافق مع الواجهة.'
+          ]}
+        ]},
+        { id: 'energy', title: 'توفير الطاقة: مصعد ذكي وفاتورة أقل', blocks: [
+          { t: 'p', x: 'المصعد يعمل طوال اليوم، ومع مرور السنوات تتراكم تكلفة الكهرباء. لذلك أصبحت تقنيات توفير الطاقة معياراً مهماً عند الاختيار، وأبرزها:' },
+          { t: 'ul', x: [
+            '<b>المحركات الحديثة بدون جير (Gearless):</b> أكثر كفاءة وأقل ضوضاء وتحتاج صيانة أقل.',
+            '<b>التحكم بتردد متغير (VVVF):</b> يضبط سرعة المحرك بدقة فيقلل الاستهلاك ويحسن راحة الركوب.',
+            '<b>إضاءة LED مع إطفاء تلقائي:</b> تطفئ إضاءة الكابينة عند عدم الاستخدام.',
+            '<b>تجميع الاستدعاءات الذكي:</b> يقلل الرحلات غير الضرورية في المباني التي بها أكثر من مصعد.'
+          ]}
+        ]},
+        { id: 'mistakes', title: 'أشهر الأخطاء التي يقع فيها الملاك', blocks: [
+          { t: 'ol', x: [
+            '<b>اختيار الأرخص فقط:</b> السعر المنخفض قد يعني مكونات أقل جودة وأعطالاً أكثر وتكلفة تشغيل أعلى على المدى الطويل.',
+            '<b>إهمال دراسة البئر مبكراً:</b> أبعاد البئر وعمق الحفرة وارتفاع آخر دور يجب أن تُحدد أثناء التصميم المعماري وليس بعد البناء.',
+            '<b>اختيار سعة أقل من الاحتياج:</b> يسبب ازدحاماً دائماً وضغطاً على المحرك.',
+            '<b>تجاهل توفر قطع الغيار:</b> مصعد بقطع نادرة قد يتوقف أسابيع انتظاراً لقطعة واحدة.',
+            '<b>عدم التخطيط للصيانة:</b> أفضل مصعد في العالم يحتاج صيانة دورية منتظمة ليبقى آمناً.',
+            '<b>إغفال التهوية والتكييف:</b> الحرارة العالية في غرفة الماكينات أو البئر تقلل عمر المكونات الإلكترونية، وهذا مهم في مناخ مكة المكرمة.'
+          ]}
+        ]},
+        { id: 'process', title: 'مراحل التنفيذ مع ديار الخبرة', blocks: [
+          { t: 'ol', x: [
+            '<b>المعاينة المجانية:</b> يزور مهندسنا موقعك ويقيس البئر ويفهم احتياجك.',
+            '<b>التصميم والمخططات:</b> نعد مخططات توضح الأبعاد والسعة والتشطيبات المقترحة.',
+            '<b>عرض السعر:</b> عرض واضح يشمل جميع البنود دون مفاجآت.',
+            '<b>التصنيع والتوريد:</b> نوفر المكونات المطابقة للمواصفات المتفق عليها.',
+            '<b>التركيب:</b> فنيون معتمدون يلتزمون بالجدول الزمني ومعايير السلامة في الموقع.',
+            '<b>الاختبار والتشغيل:</b> فحص شامل لجميع أنظمة الأمان قبل التسليم.',
+            '<b>التسليم والضمان:</b> نسلمك المصعد مع الضمان ونعرض عليك عقد صيانة دورية.'
+          ]}
+        ]}
+      ],
+      faq: [
+        { q: 'كم تستغرق مدة تركيب المصعد؟', a: 'تختلف المدة بحسب نوع المصعد وعدد الأدوار وجاهزية البئر والتشطيبات المطلوبة. بعد المعاينة نحدد لك جدولاً زمنياً واضحاً ونلتزم به.' },
+        { q: 'هل يمكن تركيب مصعد في فيلا قائمة بالفعل؟', a: 'نعم، توجد مصاعد منزلية مصممة للتركيب في المباني القائمة بأقل تعديلات ممكنة، وتتم دراسة المساحة المتاحة أثناء المعاينة لاختيار الحل الأنسب.' },
+        { q: 'هل المصعد البانورامي يحتاج صيانة أكثر من غيره؟', a: 'لا يحتاج صيانة أكثر من حيث المكونات الميكانيكية، لكن الجدران الزجاجية تحتاج تنظيفاً منتظماً للحفاظ على مظهرها، ونوفر نصائح للعناية بها.' },
+        { q: 'هل تقدمون ضماناً على المصاعد؟', a: 'نعم، نقدم ضماناً على التركيب والمكونات وفق شروط العقد المتفق عليه، مع إمكانية الاشتراك في عقد صيانة دورية بعد انتهاء الضمان.' }
+      ]
+    },
+    escalators: {
+      cat: 'السلالم والمشايات',
+      title: 'السلالم الكهربائية والمشايات المتحركة: متى تحتاجها وكيف تختارها؟',
+      lead: 'كل ما تريد معرفته عن السلالم الكهربائية والمشايات المتحركة: الفرق بينهما، وأماكن استخدامهما، والمواصفات الفنية، وتخطيط التركيب، وميزات الأمان، وطرق توفير الطاقة، ونصائح الاستخدام الآمن.',
+      date: 'أكتوبر 2026',
+      read: '10 دقائق',
+      img: 'images/about.png',
+      desc: 'دليل السلالم الكهربائية والمشايات المتحركة: الفرق بينهما، أماكن الاستخدام في المولات والمطارات، المواصفات، التخطيط، الأمان، وتوفير الطاقة.',
+      takeaways: [
+        'السلم الكهربائي لنقل الزوار بين الأدوار، والمشاية المتحركة لتغطية المسافات الأفقية أو المائلة الخفيفة.',
+        'تدفق الزوار هو أساس القرار: عرض الدرجة والسرعة واتجاه الحركة يحددهم عدد المستخدمين.',
+        'أنظمة التشغيل الذكي تقلل استهلاك الكهرباء عند قلة الحركة.',
+        'الصيانة الدورية ونظافة الدرجات والمشط أهم عوامل السلامة وطول العمر.'
+      ],
+      sections: [
+        { id: 'intro', title: 'مقدمة: حركة سلسة لآلاف الزوار', blocks: [
+          { t: 'p', x: 'في المولات والمطارات ومحطات القطار والمجمعات التجارية والفنادق الكبرى، يتحرك آلاف الأشخاص يومياً بين الأدوار وعبر الممرات الطويلة. هنا يظهر دور السلالم الكهربائية والمشايات المتحركة كحل عملي يرفع كفاءة التنقل ويقلل الازدحام ويمنح الزائر تجربة مريحة.' },
+          { t: 'p', x: 'وفي مدينة مثل مكة المكرمة، حيث تزداد الكثافة في مواسم الحج والعمرة، تصبح الحاجة إلى وسائل نقل داخلية فعالة وآمنة أكثر أهمية. في هذا المقال نعرض لك المعلومات الأساسية التي تساعدك على اتخاذ قرار صحيح قبل البدء في المشروع.' }
+        ]},
+        { id: 'diff', title: 'الفرق بين السلم الكهربائي والمشاية المتحركة', blocks: [
+          { t: 'p', x: 'قد يظن البعض أن الاثنين شيء واحد، لكن لكل منهما استخداماً مختلفاً:' },
+          { t: 'table', head: ['وجه المقارنة', 'السلم الكهربائي (إسكلاتور)', 'المشاية المتحركة'], rows: [
+            ['الوظيفة', 'نقل الأشخاص بين الأدوار صعوداً وهبوطاً', 'نقل الأشخاص أفقياً أو على ميل خفيف'],
+            ['السطح', 'درجات متحركة', 'سطح مستوٍ أو شبه مستوٍ'],
+            ['الأنسب لـ', 'المولات والمحطات والمطارات', 'الممرات الطويلة ومواقف السيارات والمطارات'],
+            ['مناسبة للعربات', 'غالباً غير مناسبة', 'مناسبة لعربات التسوق والأطفال والحقائب'],
+            ['كبار السن وذوو الاحتياجات', 'قد تحتاج إلى مصعد بديل', 'أسهل في الاستخدام']
+          ]},
+          { t: 'img', src: 'images/about.png', alt: 'الفرق بين السلم الكهربائي والمشاية المتحركة', cap: 'ضع هنا صورة توضح الفرق بين السلم والمشاية' }
+        ]},
+        { id: 'where', title: 'أين تُستخدم السلالم والمشايات؟', blocks: [
+          { t: 'ul', x: [
+            '<b>المولات والمراكز التجارية:</b> لتشجيع الزوار على التنقل بين الأدوار وزيادة حركة الشراء.',
+            '<b>المطارات ومحطات القطار:</b> لنقل أعداد كبيرة من المسافرين مع حقائبهم بسرعة وانسيابية.',
+            '<b>مواقف السيارات متعددة الأدوار:</b> مشايات مائلة تسهل حمل المشتريات وعربات التسوق.',
+            '<b>الفنادق ومراكز المؤتمرات:</b> لخدمة الصالات والقاعات الكبيرة في أوقات الذروة.',
+            '<b>المنشآت الحكومية والمستشفيات الكبرى:</b> لتسهيل التنقل في الممرات الطويلة.',
+            '<b>المرافق الدينية والمحيطة بها:</b> حيث يتطلب الأمر تنظيماً دقيقاً للحشود وسلامة عالية.'
+          ]}
+        ]},
+        { id: 'specs', title: 'المواصفات الفنية التي تحتاج أن تعرفها', blocks: [
+          { t: 'p', x: 'عند طلب عرض سعر ستسمع مصطلحات فنية كثيرة، وهذه أهمها بلغة مبسطة:' },
+          { t: 'table', head: ['المواصفة', 'القيم الشائعة', 'ماذا تعني؟'], rows: [
+            ['زاوية الميل', '30 أو 35 درجة', 'كلما قلت الزاوية زادت الراحة وزاد الطول المطلوب'],
+            ['عرض الدرجة', '600 أو 800 أو 1000 مم', 'يحدد عدد الأشخاص على الدرجة الواحدة وسعة النقل'],
+            ['السرعة الاسمية', 'حوالي 0.5 م/ث', 'السرعة المناسبة للأمان وسهولة الصعود'],
+            ['الارتفاع الرأسي', 'حسب ارتفاع الدور', 'يحدد طول السلم وقوة المحرك'],
+            ['الاستخدام', 'داخلي أو خارجي', 'الاستخدام الخارجي يحتاج حماية من الغبار والأمطار والحرارة']
+          ]},
+          { t: 'note', x: 'المواصفات النهائية تختلف حسب المشروع، ويقوم فريقنا بتحديدها بعد دراسة الموقع وحركة الزوار المتوقعة.' }
+        ]},
+        { id: 'layout', title: 'تخطيط التركيب: كيف تُرتب السلالم داخل المبنى؟', blocks: [
+          { t: 'p', x: 'طريقة ترتيب السلالم تؤثر على انسيابية الحركة وعلى تجربة الزائر داخل المكان. أشهر الترتيبات:' },
+          { t: 'ul', x: [
+            '<b>الترتيب المتوازي:</b> سلمان متجاوران أحدهما للصعود والآخر للهبوط، وهو الأبسط والأكثر استخداماً.',
+            '<b>الترتيب المتقاطع:</b> السلالم تتقاطع بشكل متعرج بين الأدوار فتوفر مساحة وتوجه الزائر عبر المحلات.',
+            '<b>السلم المنفرد:</b> يناسب الأدوار القليلة والمساحات الصغيرة، ويمكن عكس اتجاهه حسب وقت الذروة.'
+          ]},
+          { t: 'h3', x: 'نقاط يجب دراستها قبل التركيب' },
+          { t: 'ol', x: [
+            'دراسة تدفق الزوار في أوقات الذروة وتحديد الاتجاه الغالب للحركة.',
+            'قياس الارتفاع بين الأدوار وتحديد فتحة السقف المطلوبة.',
+            'ترك مساحات انتظار كافية في أعلى وأسفل السلم لتفادي الازدحام.',
+            'تنسيق موقع السلم مع الأعمدة والإنشاءات والإضاءة والتكييف.',
+            'تخصيص مصاعد قريبة لكبار السن وذوي الاحتياجات الخاصة وعربات الأطفال.'
+          ]}
+        ]},
+        { id: 'safety', title: 'ميزات الأمان في السلالم والمشايات الحديثة', blocks: [
+          { t: 'ul', x: [
+            '<b>أزرار الإيقاف الطارئ:</b> في أعلى وأسفل السلم لإيقافه فوراً عند الخطر.',
+            '<b>حساسات المشط:</b> تتوقف الحركة إذا دخل جسم غريب بين الدرجات والمشط.',
+            '<b>تنظيف الدرجات والتحكم بالفرامل:</b> فرامل تضمن التوقف التدريجي الآمن.',
+            '<b>حواجز جانبية ومقابض متزامنة:</b> تتحرك المقابض بنفس سرعة الدرجات لتوفر ثباتاً للمستخدم.',
+            '<b>الإنارة السفلية للدرجات:</b> تحدد حدود الدرجات بوضوح خصوصاً في الأماكن المزدحمة.',
+            '<b>أنظمة المراقبة:</b> مراقبة ذاتية للأعطال وإنذار مبكر قبل حدوث المشكلات.'
+          ]}
+        ]},
+        { id: 'energy', title: 'توفير الطاقة: لا تتحرك عندما لا يوجد أحد', blocks: [
+          { t: 'p', x: 'السلالم الكهربائية تعمل ساعات طويلة، وفي أوقات كثيرة لا يوجد من يستخدمها. لذلك تأتي الأنظمة الحديثة بوضع التشغيل الذكي:' },
+          { t: 'ul', x: [
+            '<b>التشغيل عند الاقتراب:</b> حساسات تُشغّل السلم تلقائياً عندما يقترب شخص منه.',
+            '<b>خفض السرعة:</b> يتباطأ السلم عند عدم وجود مستخدمين ثم يعود لسرعته الطبيعية.',
+            '<b>محركات عالية الكفاءة ونظام تحكم بتردد متغير:</b> يقللان استهلاك الكهرباء بشكل ملحوظ على مدى سنوات التشغيل.',
+            '<b>إضاءة LED:</b> للدرجات والحواجز والمقابض بدلاً من الإضاءة التقليدية.'
+          ]}
+        ]},
+        { id: 'tips', title: 'إرشادات للمستخدمين: كيف نستخدم السلم الكهربائي بأمان؟', blocks: [
+          { t: 'ol', x: [
+            'أمسك المقبض الجانبي دائماً وقف في منتصف الدرجة.',
+            'تجنب لمس الجوانب أو الوقوف قرب حافة الدرجة.',
+            'لا تستخدم السلم بعربات التسوق أو عربات الأطفال الكبيرة، واستخدم المصعد أو المشاية المخصصة.',
+            'أمسك أيدي الأطفال ولا تتركهم يلعبون على السلم.',
+            'انتبه للملابس الفضفاضة والأربطة والحقائب الطويلة حتى لا تعلق.',
+            'ابتعد عن مخرج السلم فور الوصول لتجنب الازدحام خلفك.'
+          ]},
+          { t: 'note', x: 'يُنصح بوضع لوحات إرشادية واضحة عند مداخل السلالم، ونحن نوفرها ضمن حزمة التركيب عند الطلب.' }
+        ]},
+        { id: 'maintenance', title: 'الصيانة: سر العمر الطويل', blocks: [
+          { t: 'p', x: 'السلم الكهربائي يتكون من آلاف الأجزاء المتحركة، ولذلك فهو يحتاج إلى برنامج صيانة منتظم يشمل:' },
+          { t: 'ul', x: [
+            'فحص السلاسل والدرجات والعجلات والمحامل وتزييتها.',
+            'فحص المشط وفواصل الدرجات وتنظيفها من الأتربة والأجسام الصغيرة.',
+            'فحص المقابض والسيور والمحرك وصندوق التروس.',
+            'اختبار أنظمة الأمان وأزرار الإيقاف الطارئ بشكل دوري.',
+            'فحص لوحة التحكم والأسلاك والحساسات.'
+          ]}
+        ]},
+        { id: 'mistakes', title: 'أخطاء شائعة عند التخطيط', blocks: [
+          { t: 'ol', x: [
+            'اختيار عرض درجة صغير لا يكفي لحركة الزوار في أوقات الذروة.',
+            'تجاهل المسافات الآمنة أعلى وأسفل السلم فيتكدس الزوار عند المخارج.',
+            'عدم تخصيص بدائل (مصاعد أو منحدرات) لذوي الاحتياجات الخاصة.',
+            'إهمال الحماية في السلالم الخارجية من الغبار والأمطار ودرجات الحرارة المرتفعة.',
+            'اختيار مورد لا يوفر قطع غيار وخدمة صيانة سريعة في مكة المكرمة.'
+          ]}
+        ]},
+        { id: 'process', title: 'كيف نعمل معك خطوة بخطوة؟', blocks: [
+          { t: 'ol', x: [
+            'زيارة الموقع وتحليل حركة الزوار والارتفاعات والمساحات المتاحة.',
+            'اقتراح الحل الأنسب (سلم أو مشاية) وتحديد المواصفات وعدد الوحدات.',
+            'إعداد المخططات وعرض السعر الشامل.',
+            'التوريد والتركيب بفريق فني معتمد وخطة سلامة للموقع.',
+            'الاختبار والتشغيل التجريبي ثم التسليم والتدريب على التعامل مع الأنظمة.',
+            'الصيانة الدورية وخدمة الطوارئ على مدار الساعة.'
+          ]}
+        ]}
+      ],
+      faq: [
+        { q: 'هل يمكن تركيب سلم كهربائي في مبنى قائم؟', a: 'في الغالب نعم، بشرط دراسة الإنشاءات وتجهيز فتحة في السقف وتأمين الدعم الإنشائي المناسب. نقوم بالمعاينة أولاً ثم نحدد الجدوى.' },
+        { q: 'هل المشايات المتحركة مناسبة لعربات التسوق؟', a: 'المشايات المائلة المصممة لذلك مناسبة لعربات التسوق وعربات الأطفال، لأن سطحها مستوٍ وتحتوي على مكابح خاصة للعجلات.' },
+        { q: 'هل يمكن استخدام السلالم الكهربائية في الأماكن الخارجية؟', a: 'نعم، بنماذج مخصصة للاستخدام الخارجي بحماية مناسبة من الغبار والمطر والحرارة، مع صيانة منتظمة.' },
+        { q: 'كيف أقلل استهلاك الكهرباء؟', a: 'باختيار أنظمة التشغيل الذكي التي تخفض السرعة أو تتوقف عند عدم وجود مستخدمين، مع محركات عالية الكفاءة وإضاءة LED.' }
+      ]
+    },
+
+    maintenance: {
+      cat: 'الصيانة',
+      title: 'الصيانة الدورية وعقود الصيانة: كيف تحمي مصعدك وتطيل عمره؟',
+      lead: 'ماذا نفحص في كل زيارة صيانة؟ وما علامات الإنذار المبكر؟ وما الفرق بين أنواع عقود الصيانة؟ وماذا تفعل إذا توقف المصعد وبداخله أشخاص؟ دليل عملي لكل مالك مبنى ومدير عقار.',
+      date: 'أكتوبر 2026',
+      read: '11 دقيقة',
+      img: 'images/serv8.png',
+      desc: 'دليل صيانة المصاعد في مكة المكرمة: الصيانة الوقائية والعلاجية، علامات الإنذار، أنواع عقود الصيانة، التصرف عند احتجاز الركاب، واختيار شركة صيانة.',
+      takeaways: [
+        'الصيانة الوقائية أرخص وأأمن من انتظار حدوث العطل.',
+        'أي صوت غريب أو اهتزاز أو توقف غير دقيق هو إشارة تستحق الفحص فوراً.',
+        'عقد الصيانة المناسب يحدد الزيارات وقطع الغيار وخدمة الطوارئ بوضوح.',
+        'عند احتجاز الركاب: لا تفتح الأبواب بالقوة واتصل بفريق الطوارئ فوراً.'
+      ],
+      sections: [
+        { id: 'intro', title: 'مقدمة: المصعد الذي لا يُصان يتعطل في أسوأ وقت', blocks: [
+          { t: 'p', x: 'يعمل المصعد عشرات وربما مئات المرات في اليوم، وفي كل مرة تتحرك مكوناته الميكانيكية والكهربائية وتتعرض للاحتكاك والحرارة والاهتزاز. وكما تحتاج السيارة إلى تغيير الزيت وفحص الفرامل، يحتاج المصعد إلى صيانة دورية منتظمة تضمن عمله بسلاسة وأمان.' },
+          { t: 'p', x: 'المشكلة أن كثيراً من الملاك لا يهتمون بالصيانة إلا بعد حدوث عطل، وغالباً يحدث العطل في أسوأ توقيت: صباح يوم مزدحم، أو أثناء موسم عمرة، أو بينما يوجد أشخاص بداخل الكابينة. لذلك فالصيانة الوقائية ليست رفاهية، بل استثمار يحميك من التكاليف والمخاطر.' }
+        ]},
+        { id: 'types', title: 'الصيانة الوقائية والصيانة العلاجية', blocks: [
+          { t: 'table', head: ['وجه المقارنة', 'الصيانة الوقائية', 'الصيانة العلاجية'], rows: [
+            ['التوقيت', 'مجدولة بانتظام قبل حدوث العطل', 'بعد حدوث العطل أو التوقف'],
+            ['الهدف', 'منع الأعطال وإطالة عمر المصعد', 'إصلاح المشكلة وإعادة التشغيل'],
+            ['التكلفة على المدى الطويل', 'أقل بوجه عام', 'أعلى وغير متوقعة غالباً'],
+            ['تأثيرها على الأمان', 'ترفع مستوى السلامة', 'تأتي بعد وقوع الخطر المحتمل'],
+            ['وقت التوقف', 'قصير ومخطط له', 'طويل وغير متوقع']
+          ]},
+          { t: 'p', x: 'أفضل نهج هو الجمع بين الاثنين: برنامج وقائي منتظم لتقليل المشكلات، وخدمة علاجية سريعة للتعامل مع أي طارئ.' }
+        ]},
+        { id: 'inspect', title: 'ماذا نفحص في كل زيارة صيانة؟', blocks: [
+          { t: 'p', x: 'يتبع فنيونا قائمة فحص شاملة تغطي جميع أجزاء المصعد، ومن أهمها:' },
+          { t: 'ul', x: [
+            '<b>المحرك والماكينة:</b> فحص الحرارة والاهتزاز والأصوات وتزييت الأجزاء المتحركة.',
+            '<b>الحبال والكابلات:</b> فحص الشد والتآكل والتأكد من سلامتها.',
+            '<b>الأبواب والأقفال:</b> ضبط الفتح والإغلاق وفحص الحساسات والستارة الضوئية.',
+            '<b>لوحة التحكم:</b> فحص الأسلاك والريليهات والمحولات والبطاقات الإلكترونية.',
+            '<b>الفرامل ومحدد السرعة:</b> اختبار عملها واستجابتها للسرعات الزائدة.',
+            '<b>القضبان الموجهة والأحذية:</b> تنظيف وتزييت وفحص التآكل.',
+            '<b>غرفة الماكينات والبئر والحفرة:</b> تنظيف وفحص الرطوبة والتهوية وأي تسريبات.',
+            '<b>الإنارة والإنذار والاتصال:</b> التأكد من عمل إنارة الطوارئ وزر الإنذار.',
+            '<b>نظام الإنقاذ الآلي:</b> فحص البطاريات واختبار عمله عند انقطاع الكهرباء.'
+          ]},
+          { t: 'img', src: 'images/serv8.png', alt: 'فني صيانة يفحص مكونات المصعد', cap: 'ضع هنا صورة لفني الصيانة أثناء العمل' }
+        ]},
+        { id: 'signs', title: 'علامات الإنذار المبكر: متى يجب أن تتصل بنا فوراً؟', blocks: [
+          { t: 'p', x: 'المصعد غالباً "يتكلم" قبل أن يتعطل. انتبه لأي من العلامات التالية:' },
+          { t: 'ul', x: [
+            'أصوات احتكاك أو طرق أو صرير غير معتاد أثناء الحركة.',
+            'اهتزاز أو ارتجاج واضح داخل الكابينة.',
+            'توقف المصعد بعيداً عن مستوى الطابق بفارق ملحوظ.',
+            'تأخر في فتح الأبواب أو إغلاقها أو ارتدادها بشكل متكرر.',
+            'بطء غير مبرر في السرعة أو انتظار طويل بعد الضغط على الزر.',
+            'وميض الأضواء أو توقف لوحة الأزرار عن الاستجابة.',
+            'ارتفاع حرارة غرفة الماكينات أو رائحة احتراق.',
+            'تكرار توقف المصعد بين الأدوار.'
+          ]},
+          { t: 'note', x: 'إذا لاحظت رائحة احتراق أو دخاناً أو اهتزازاً شديداً: أوقف استخدام المصعد فوراً واتصل بفريق الطوارئ على <b>0599985514</b>.' }
+        ]},
+        { id: 'contracts', title: 'أنواع عقود الصيانة: أي عقد يناسبك؟', blocks: [
+          { t: 'p', x: 'يختلف عقد الصيانة من شركة لأخرى، ولذلك من المهم أن تفهم ما يغطيه بالضبط قبل التوقيع. وهذه مقارنة تقريبية بين النوعين الأكثر شيوعاً:' },
+          { t: 'table', head: ['البند', 'عقد الصيانة الوقائية', 'عقد الصيانة الشامل'], rows: [
+            ['الزيارات الدورية', 'تشمل فحصاً وتنظيفاً وتزييتاً', 'تشمل جميع ما سبق'],
+            ['إصلاح الأعطال', 'حسب الاتفاق وقد يكون بمقابل', 'مشمول ضمن العقد'],
+            ['قطع الغيار', 'على حساب المالك غالباً', 'تشمل أغلب القطع حسب شروط العقد'],
+            ['خدمة الطوارئ 24/7', 'حسب الاتفاق', 'مشمولة'],
+            ['التقارير الدورية', 'ملخص بعد كل زيارة', 'تقارير تفصيلية بعد كل زيارة'],
+            ['الأنسب لـ', 'المباني الجديدة والمصاعد الحديثة', 'المباني ذات الاستخدام الكثيف والمصاعد الأقدم']
+          ]},
+          { t: 'note', x: 'تفاصيل التغطية تحددها بنود العقد النهائي، ونوضح لك كل بند قبل التوقيع حتى لا تكون هناك أي مفاجآت.' }
+        ]},
+        { id: 'frequency', title: 'كم مرة يجب إجراء الصيانة؟', blocks: [
+          { t: 'p', x: 'يعتمد عدد الزيارات على عوامل عدة، أبرزها:' },
+          { t: 'ul', x: [
+            '<b>كثافة الاستخدام:</b> مصعد فندق أو مستشفى يحتاج زيارات أكثر من مصعد فيلا.',
+            '<b>عمر المصعد:</b> المصاعد الأقدم تحتاج متابعة أدق.',
+            '<b>بيئة التشغيل:</b> الحرارة والغبار والرطوبة تزيد من التآكل.',
+            '<b>المواسم:</b> في مواسم الذروة مثل الحج ورمضان يُنصح بزيادة الفحص قبل بدء الموسم.'
+          ]},
+          { t: 'p', x: 'عادة تكون الزيارات شهرية للمباني التجارية والفنادق، وقد تكون أقل تكراراً للمصاعد المنزلية، ونحدد الجدول الأنسب بعد فحص مصعدك.' }
+        ]},
+        { id: 'stuck', title: 'ماذا تفعل إذا توقف المصعد وبداخله أشخاص؟', blocks: [
+          { t: 'p', x: 'احتجاز الركاب موقف مقلق لكنه في الغالب غير خطير إذا تم التصرف بهدوء وبشكل صحيح. إرشادات للركاب:' },
+          { t: 'ol', x: [
+            'حافظ على هدوئك، فالمصعد مزود بوسائل أمان تمنع سقوطه.',
+            'اضغط زر الإنذار أو الاتصال الداخلي وانتظر الرد.',
+            'لا تحاول فتح الأبواب بالقوة ولا تتسلق للخروج من الفتحات.',
+            'ابتعد عن الأبواب وانتظر وصول فريق الإنقاذ المدرب.',
+            'إذا كان معك أطفال أو كبار سن فاجعلهم يجلسون ويطمئنوا.'
+          ]},
+          { t: 'p', x: 'وإرشادات لمدير المبنى: اتصل فوراً بشركة الصيانة أو الطوارئ، وأبلغ الأشخاص بالداخل أن المساعدة في الطريق، ولا تحاول تحريك الكابينة بنفسك دون تدريب. فريقنا يعمل على مدار الساعة في مكة المكرمة للتعامل مع هذه الحالات بسرعة.' }
+        ]},
+        { id: 'cost', title: 'تكلفة الإهمال: لماذا الصيانة أرخص من الإصلاح؟', blocks: [
+          { t: 'ul', x: [
+            '<b>أعطال كبيرة مفاجئة:</b> قطعة صغيرة غير مفحوصة قد تتلف قطعاً أخرى مكلفة.',
+            '<b>توقف طويل:</b> قد يعطل المبنى أو يؤثر على الإيرادات في الفنادق والمحلات.',
+            '<b>مخاطر السلامة:</b> الإهمال قد يعرض الركاب للخطر ويعرضك للمساءلة.',
+            '<b>تقادم أسرع:</b> يقصر عمر المصعد فتحتاج إلى استبداله قبل الأوان.',
+            '<b>استهلاك أعلى للكهرباء:</b> الأجزاء غير المزيتة أو المضبوطة تزيد الأحمال.'
+          ]}
+        ]},
+        { id: 'modern', title: 'متى يكون التحديث أفضل من الإصلاح المتكرر؟', blocks: [
+          { t: 'p', x: 'إذا أصبح المصعد القديم يتعطل باستمرار، أو لم تعد قطع غياره متوفرة، أو كان صاخباً ومستهلكاً للطاقة، فقد يكون التحديث الجزئي أو الكامل هو الحل الأوفر. يشمل التحديث غالباً:' },
+          { t: 'ul', x: [
+            'استبدال لوحة التحكم بنظام حديث أكثر كفاءة وأماناً.',
+            'تركيب محرك حديث هادئ وموفر للطاقة.',
+            'تحديث الأبواب والحساسات والإنارة.',
+            'تجديد الكابينة والتشطيبات لمظهر عصري.',
+            'إضافة أنظمة إنقاذ آلي ومراقبة عن بُعد.'
+          ]}
+        ]},
+        { id: 'choose', title: 'كيف تختار شركة الصيانة المناسبة؟', blocks: [
+          { t: 'ol', x: [
+            'اسأل عن خبرة الشركة وعدد العقود التي تديرها وفنييها المعتمدين.',
+            'تأكد من وجود خدمة طوارئ فعلية على مدار الساعة وسرعة الاستجابة.',
+            'اطلب توضيحاً مكتوباً لما يشمله العقد وما لا يشمله.',
+            'اسأل عن توفر قطع الغيار الأصلية وسرعة توريدها.',
+            'تأكد أن الشركة تتعامل مع مختلف الماركات والمصاعد القديمة والحديثة.',
+            'اطلب تقارير مكتوبة بعد كل زيارة لمتابعة حالة المصعد.'
+          ]}
+        ]},
+        { id: 'process', title: 'كيف نبدأ معك؟', blocks: [
+          { t: 'ol', x: [
+            'فحص أولي مجاني لمصعدك لتقييم حالته.',
+            'تقرير مكتوب يوضح الملاحظات والأعطال المحتملة.',
+            'اقتراح عقد الصيانة الأنسب لحالة مبناك وميزانيتك.',
+            'جدولة الزيارات الدورية وتعيين فريق ثابت لخدمتك.',
+            'متابعة مستمرة وتقارير بعد كل زيارة وخدمة طوارئ جاهزة دائماً.'
+          ]}
+        ]}
+      ],
+      faq: [
+        { q: 'هل تتعاملون مع المصاعد التي لم تركبها شركتكم؟', a: 'نعم، نتعامل مع مختلف الماركات والأنواع بعد فحص أولي لتحديد الحالة وتوفر القطع المناسبة.' },
+        { q: 'هل خدمة الطوارئ متاحة في الإجازات والأعياد؟', a: 'فريق الطوارئ جاهز على مدار الساعة طوال أيام الأسبوع، ويمكنك الاتصال في أي وقت.' },
+        { q: 'هل يمكن تحويل عقد صيانة من شركة أخرى إلينا؟', a: 'نعم، بعد انتهاء عقدك الحالي أو وفق شروطه نقوم بفحص المصعد ونقدم لك عقداً مناسباً.' },
+        { q: 'هل الصيانة الدورية تقلل استهلاك الكهرباء؟', a: 'نعم، فالتزييت والضبط الصحيح للمكونات يقللان الاحتكاك والأحمال الزائدة على المحرك.' }
+      ]
+    }
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var key = params.get('post');
+  if (!POSTS[key]) { key = 'elevators'; }
+  var post = POSTS[key];
+
+  function $(id) { return document.getElementById(id); }
+
+  function renderBlock(b) {
+    switch (b.t) {
+      case 'p': return '<p>' + b.x + '</p>';
+      case 'h3': return '<h3>' + b.x + '</h3>';
+      case 'note': return '<div class="note">' + b.x + '</div>';
+      case 'ul': return '<ul class="bul">' + b.x.map(function (i) { return '<li>' + i + '</li>'; }).join('') + '</ul>';
+      case 'ol': return '<ol class="steps">' + b.x.map(function (i) { return '<li>' + i + '</li>'; }).join('') + '</ol>';
+      case 'table':
+        return '<div class="tbl-wrap"><table><thead><tr>' +
+          b.head.map(function (h) { return '<th>' + h + '</th>'; }).join('') +
+          '</tr></thead><tbody>' +
+          b.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + c + '</td>'; }).join('') + '</tr>'; }).join('') +
+          '</tbody></table></div>';
+      case 'img':
+        return '<figure class="pic"><div class="pic-box"><img src="' + b.src + '" alt="' + b.alt + '" loading="lazy" onerror="this.style.display=\'none\'"><div class="pic-fb">' + b.cap + '</div></div><figcaption>' + b.alt + '</figcaption></figure>';
+      default: return '';
+    }
+  }
+  document.title = post.title + ' | ديار الخبرة';
+  document.querySelector('meta[name="description"]').setAttribute('content', post.desc);
+
+  $('crumbCat').textContent = post.cat;
+  $('catChip').textContent = post.cat;
+  $('postTitle').textContent = post.title;
+  $('postLead').textContent = post.lead;
+  $('postMeta').innerHTML =
+    '<span>' + ICON_CAL + post.date + '</span>' +
+    '<span>' + ICON_CLK + 'قراءة ' + post.read + '</span>' +
+    '<span>' + ICON_USER + 'فريق ديار الخبرة</span>';
+
+  var heroImg = $('heroImg');
+  heroImg.src = post.img;
+  heroImg.alt = post.title;
+  var html = '';
+
+  html += '<div class="takeaways rv"><h2>أهم ما ستتعلمه من هذا المقال</h2><ul>' +
+    post.takeaways.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul></div>';
+
+  post.sections.forEach(function (s) {
+    html += '<section class="sec rv" id="' + s.id + '"><h2>' + s.title + '</h2>' +
+      s.blocks.map(renderBlock).join('') + '</section>';
+  });
+
+  html += '<section class="sec faq rv" id="faq"><h2>أسئلة شائعة</h2>' +
+    post.faq.map(function (f) { return '<details><summary>' + f.q + '</summary><p>' + f.a + '</p></details>'; }).join('') +
+    '</section>';
+
+  html += '<div class="bottom-cta rv"><div><h3>جاهز لبدء مشروعك؟</h3><p>تواصل مع فريق ديار الخبرة في مكة المكرمة واحصل على معاينة واستشارة مجانية وعرض سعر واضح.</p></div>' +
+    '<div class="acts"><a href="tel:' + PHONE + '" class="btn btn-gold">اتصل الآن</a>' +
+    '<a href="https://wa.me/966599985514" target="_blank" rel="noopener" class="btn btn-line">واتساب</a></div></div>';
+
+  $('article').innerHTML = html;
+  var tocHtml = post.sections.map(function (s) {
+    return '<li><a href="#' + s.id + '" data-id="' + s.id + '">' + s.title + '</a></li>';
+  }).join('') + '<li><a href="#faq" data-id="faq">أسئلة شائعة</a></li>';
+  $('tocList').innerHTML = tocHtml;
+  var rel = Object.keys(POSTS).filter(function (k) { return k !== key; }).map(function (k) {
+    var p = POSTS[k];
+    return '<a class="rel-card rv" href="blog.html?post=' + k + '"><small>' + p.cat + '</small><h3>' + p.title +
+      '</h3><p>' + p.desc + '</p><span>اقرأ المقال ←</span></a>';
+  }).join('');
+  $('relGrid').innerHTML = rel;
+  var ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.desc,
+    inLanguage: 'ar',
+    author: { '@type': 'Organization', name: 'ديار الخبرة' },
+    publisher: { '@type': 'Organization', name: 'ديار الخبرة' }
+  });
+  document.head.appendChild(ld);
+  var bar = $('progress');
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = Math.min(100, Math.max(0, p)) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  var rvs = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var ro = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    rvs.forEach(function (el) { ro.observe(el); });
+  } else {
+    rvs.forEach(function (el) { el.classList.add('in'); });
+  }
+  var tocLinks = document.querySelectorAll('.toc a');
+  var secs = Array.prototype.slice.call(document.querySelectorAll('.sec[id]'));
+
+  function spy() {
+    var current = secs.length ? secs[0].id : '';
+    secs.forEach(function (s) {
+      if (s.getBoundingClientRect().top <= 140) { current = s.id; }
+    });
+    tocLinks.forEach(function (a) {
+      a.classList.toggle('on', a.getAttribute('data-id') === current);
+    });
+  }
+
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+})();
+</script>
+</body>
+</html>
